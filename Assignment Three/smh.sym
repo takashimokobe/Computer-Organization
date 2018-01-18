@@ -1,0 +1,14 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	CLEAR                   3009
+//	COUNT                   302A
+//	FIRST                   301C
+//	INIT                    302C
+//	INMES                   302F
+//	INPUT                   3012
+//	LETa                    302D
+//	LETy                    302E
+//	OUTMES                  303E
+//	OUTPUT                  301E
+//	PTR                     302B
+//	SIZE                    3029

@@ -1,0 +1,26 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	CHOSE                   3042
+//	DEC                     304E
+//	GetInt                  3028
+//	GetPoints               3033
+//	Q1                      304F
+//	Q1P                     3052
+//	Q2                      3050
+//	Q2P                     3053
+//	Q3                      3051
+//	Q3P                     3054
+//	Res1                    3024
+//	Res2                    3021
+//	Res3                    301E
+//	Res4                    301B
+//	Result1                 3055
+//	Result2                 3056
+//	Result3                 3057
+//	Result4                 3058
+//	SaveR0                  3059
+//	SaveR1                  305A
+//	SaveR2                  305B
+//	SaveR4                  305C
+//	SaveR7                  305D
+//	Start                   3000

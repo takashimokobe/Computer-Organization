@@ -1,0 +1,20 @@
+0011 0000 0000 0000			; start the program at memory location x3000
+0101 000 000 1 00000		; clears register 0
+0101 001 001 1 00000		; clears register 1
+0001 000 000 1 00001		; load R0 with immediate value 1
+0010 001 011111100			; load R1 with x3100 data
+0101 010 000 000 001 		; AND R0 and R1, store the result in R2
+0000 010 00000001			; checks if not positive, if so skips next instruction
+0001 011 011 1 00001		; increment 1 to R3 (R3 is our counter)
+0001 000 000 000 000		; adding R0 to R0 (adding itself to make a left shift)
+0000 101 11111011			; checks if not 0, if so goes back to AND instruction
+0011 011 01110111			; stores counter from R3 into memory location x3101
+1111 0000 00100101			; HALT instruction. 
+
+
+							; Takahiro Shimokobe
+
+							; R0 is used as a value that is used to compare the bits with each other. Compare bit by bit, and if it the bit shift is 0, then we cancel. 
+							; R1 is used to load the data at memory location x3100
+							; R2 is used as a checker, if it's not positive then we can't increment to our counter. 
+							; R3 is used as our counter, which counts the amount of ones that are in the value. 

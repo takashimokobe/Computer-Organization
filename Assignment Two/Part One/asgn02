@@ -1,0 +1,13 @@
+R1 - Cleared at first - loading the sum of data processed through x3100
+R2 - Load the address of x3100 - we will be stepping through the instruction cycle (incrementing by one)
+R3 - Load the data of x3100 into
+R4 - Cleared at first -> Counter at 10 -> everytime we run through a process we will decrement counter by one
+
+There will be a loop until R4 hits 0 (BRp)
+
+Trap Vector x23 HALTS the program. 
+
+The sum of the loop going through is x9928
+R2 is represented as the address location of x3100 - it is essentially used as a functiion.
+R2 is incremented in the instruction at x3005 to step through the instruction cycle at x3100. 
+The value 10 is loaded into R4 as a counter. Each time it goes through the loop, it decrements by one, until it is 0. Then the loop stop and the whole thing stops adding. 

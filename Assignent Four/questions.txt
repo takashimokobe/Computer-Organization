@@ -1,0 +1,20 @@
+; Takahiro Shimokobe
+; CSC 225
+
+
+; 2) Is the KBSR interrupt enabled? The KBSR is mapped to xFE00. 
+
+; The KBSR interrupt is not enabled. 
+
+; 3) Look at the Trap Vector Table. Go to service routine for Trap x21. This is the code to output a character to the monitor. Explain, line by line, what the what is doing. 
+
+; First, the address is stored into R1 so we can come back to that spot in memory so we can return there. 
+; We load indirectly the data storage register into R1. 
+; We use a polling routine to check if the last bit has been set (is the DSR on?). If it is, then we can move on. 
+; We then store the Direct Data register into R0. 
+; We restore R1. 
+; We then use RET to get out of the TRAP. 
+
+; We are using polling in this example. 
+
+

@@ -1,0 +1,26 @@
+; Taka Shimokobe
+; CSC 225
+
+; Background:
+
+; Your program will translate words from English to Pig Latin. 
+; To translate to Pig Latin, remove the starting letter of the word and put it at the end. Then add "ay" to the word. 
+
+; Description:
+
+; "Program should prompt the user for the word to be translated."
+; Input a word of no more than 19 characters, followed by the <enter> key. Assume the user will not enter a message longer than 19 characters. 
+
+			.ORIG 	x3000			; Start at memory location x3000
+			AND 	R1, R1, #0		; 	
+			AND 	R2, R2, #0		; 
+
+			GETC
+			OUT
+
+FINISH 		HALT
+
+PTR 		.BLKW #20
+LTNWORD
+PROMPT 		.STRINGZ "English Word: \r"
+PROMPT2		.STRINGZ "Pig-Latin Word: \r"

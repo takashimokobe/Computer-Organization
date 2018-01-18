@@ -1,0 +1,13 @@
+First, we need a way to figure out whether a given bit in a byte is 0 or 1. 
+To do so, we will bitwise AND the byte with 2^(n-1), where n is the bit position we are
+interested in. We then compare the result to 0.
+
+If the result is 0, then bit n of the original byte must also be equal to 0. 
+
+Instead of writing out 8 seperate bit masks for each bit position, we can store 1 into a register and continue to use that. Then we can write a for loop from one to eight that bit shifts the byte by one through every iteration. 
+
+We then AND this value by one to get the value of the bit at position n, where n is the loop index. 
+
+During each iteration we'll need to write this bit value to its correct location to an output byte, which we will initialize to zero. If the bit in question is 0, then we don't need to do anything, since the corresponding bit in the output byte is already zero. 
+
+If the bit is equal to 1, then we need to write it at position 9-n in the output byte, where n is the current loop index. TO do this, we will bitwise OR the output byte with the bitmask 2^(n-1). Because every other value in this bit mask is zero, we preservae all the existing values inthe output byte, expect the one we want to flip on. 

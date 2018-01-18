@@ -1,0 +1,26 @@
+; Goal - to write a program in that takes a number and flips the bits. 
+; Take the number stored at x3100 and reverse the bits. 
+; Store your results in x3101. 
+; Example: If the bit pattern is 1010100101011111 is stored at memory location x3100, ; your program should write the bit pattern 1111101010010101. 
+
+; R0: a value used to compare bits with each toher. Compares bit by bit. 
+; R1: x3100 data
+; R2: Counter that flips the bits
+
+; Thoughts: Do a left (or right) shift, where one bit gets shifted out and a zero gets shifted in. Then shift that into the other end of the destination register/memory address, until the flipped bits version shows up. (How do I know this???)
+
+0011 0000 0000 0000 		; Start the PC at memory location x3000. 
+0101 000 000 1 00000		; clears R0
+0101 001 001 1 00000		; clears R1
+0001 000 000 1 00001		; add 1 to R0
+1001 000 000 111111	p		; flip the bits in R0 for all 1's and a 0
+0001 000 000 1 10000		; add 16 to R2
+0010 001 011111100			; load R1 with x3100 data
+1111 0000 00100101			; HALT instruction
+
+
+
+
+
+
+
